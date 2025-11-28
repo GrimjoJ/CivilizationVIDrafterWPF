@@ -79,38 +79,6 @@
             </Grid>
         </StackPanel>
 
-        <!--<Slider x:Name="sliderNumPlayers"
-                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2"
-                HorizontalAlignment="Center" VerticalAlignment="Center"
-                Width="780" Maximum="8" Minimum="1" Value="1"
-                IsSnapToTickEnabled="True" TickPlacement="BottomRight"
-                ValueChanged="sliderNumPlayers_ValueChanged">
-        </Slider>
-
-        <Grid Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" Width="800" HorizontalAlignment="Center">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.03875*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="0.03875*" />
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="1" Text="Число игроков" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                       FontSize="18" Grid.ColumnSpan="2" Foreground="#FFD4AF37"/>
-            <TextBlock Grid.Column="0" Text="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,35,87,0" FontSize="18" Foreground="White"/>
-            <TextBlock Grid.Column="1" Text="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,35,0,0" FontSize="18" Foreground="White"/>
-            <TextBlock Grid.Column="2" Text="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,35,0,0" FontSize="18" Foreground="White"/>
-            <TextBlock Grid.Column="3" Text="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4,35,0,0" FontSize="18" Foreground="White"/>
-            <TextBlock Grid.Column="4" Text="5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,35,3,0" FontSize="18" Foreground="White"/>
-            <TextBlock Grid.Column="5" Text="6" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,35,10,0" FontSize="18" Foreground="White"/>
-            <TextBlock Grid.Column="6" Text="7" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,35,15,0" FontSize="18" Foreground="White"/>
-            <TextBlock Grid.Column="7" Text="8" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,35,11,0" FontSize="18" Foreground="White"/>
-        </Grid>-->
-
         <!-- Слайдер: число цивилизаций на игрока + подписи (всё в одном StackPanel) -->
         <StackPanel Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="3" 
             HorizontalAlignment="Center" VerticalAlignment="Center">

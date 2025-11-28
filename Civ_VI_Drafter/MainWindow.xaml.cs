@@ -14,7 +14,7 @@ namespace CivVIDrafter
         }
 
         /// <summary>
-        /// Обработчик кнопки "Сделать драфт".
+        /// Обработчик кнопки "Сделать драфт"
         /// </summary>
         private void Button_Click(object sender, RoutedEventArgs e)
         {

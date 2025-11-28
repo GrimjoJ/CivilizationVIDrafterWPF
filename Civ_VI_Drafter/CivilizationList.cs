@@ -6,7 +6,7 @@ namespace CivVIDrafter
     public static class CivilizationList
     {
         /// <summary>
-        /// Полный список всех цивилизаций и лидеров.
+        /// Полный список всех цивилизаций и лидеров. (Включая все DLC)
         /// </summary>
         public static readonly List<Civilization> AllCivilizations = new List<Civilization>
         {

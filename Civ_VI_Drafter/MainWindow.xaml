@@ -1,0 +1,295 @@
+﻿<Window x:Class="CivVIDrafter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CivVIDrafter"
+        mc:Ignorable="d"
+        Title="Civ VI Drafter" Height="940" Width="880"
+        Background="#FF2D2D30" Foreground="White" FontFamily="Segoe UI">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="2.75*"/>
+            <RowDefinition Height="2.75*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*" />
+            <ColumnDefinition Width="1.0*" />
+            <ColumnDefinition Width="1.0*" />
+            <ColumnDefinition Width="1.0*" />
+            <ColumnDefinition Width="1.0*" />
+            <ColumnDefinition Width="0.1*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Главные настройки" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="24" FontWeight="Bold" Grid.ColumnSpan="4" 
+                   Foreground="#FFD4AF37"/>
+
+        <!-- Слайдер: число игроков -->
+
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" 
+    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Grid.Column="1" Text="Число игроков" HorizontalAlignment="Center" VerticalAlignment="Top" 
+           FontSize="18" Grid.ColumnSpan="2" Foreground="#FFD4AF37"/>
+            <Slider x:Name="sliderNumPlayers"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="780" Maximum="8" Minimum="1" Value="1"
+                IsSnapToTickEnabled="True" TickPlacement="BottomRight"
+                ValueChanged="sliderNumPlayers_ValueChanged">
+            </Slider>
+            <Grid Height="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="1" FontSize="18" Foreground="White" 
+           HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1" Text="2" FontSize="18" Foreground="White" 
+           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="13,0,0,0"/>
+                <TextBlock Grid.Column="2" Text="3" FontSize="18" Foreground="White" 
+           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="26,0,0,0"/>
+                <TextBlock Grid.Column="3" Text="4" FontSize="18" Foreground="White" 
+           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="39,0,0,0"/>
+                <TextBlock Grid.Column="4" Text="5" FontSize="18" Foreground="White" 
+           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="51,0,0,0"/>
+                <TextBlock Grid.Column="5" Text="6" FontSize="18" Foreground="White" 
+           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="62,0,0,0"/>
+                <TextBlock Grid.Column="6" Text="7" FontSize="18" Foreground="White" 
+           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="75,0,0,0"/>
+                <TextBlock Grid.Column="7" Text="8" FontSize="18" Foreground="White" 
+           HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            </Grid>
+        </StackPanel>
+
+        <!--<Slider x:Name="sliderNumPlayers"
+                Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="780" Maximum="8" Minimum="1" Value="1"
+                IsSnapToTickEnabled="True" TickPlacement="BottomRight"
+                ValueChanged="sliderNumPlayers_ValueChanged">
+        </Slider>
+
+        <Grid Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" Width="800" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.03875*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.03875*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="1" Text="Число игроков" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       FontSize="18" Grid.ColumnSpan="2" Foreground="#FFD4AF37"/>
+            <TextBlock Grid.Column="0" Text="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,35,87,0" FontSize="18" Foreground="White"/>
+            <TextBlock Grid.Column="1" Text="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,35,0,0" FontSize="18" Foreground="White"/>
+            <TextBlock Grid.Column="2" Text="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,35,0,0" FontSize="18" Foreground="White"/>
+            <TextBlock Grid.Column="3" Text="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4,35,0,0" FontSize="18" Foreground="White"/>
+            <TextBlock Grid.Column="4" Text="5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,35,3,0" FontSize="18" Foreground="White"/>
+            <TextBlock Grid.Column="5" Text="6" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,35,10,0" FontSize="18" Foreground="White"/>
+            <TextBlock Grid.Column="6" Text="7" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,35,15,0" FontSize="18" Foreground="White"/>
+            <TextBlock Grid.Column="7" Text="8" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,35,11,0" FontSize="18" Foreground="White"/>
+        </Grid>-->
+
+        <!-- Слайдер: число цивилизаций на игрока + подписи (всё в одном StackPanel) -->
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="3" 
+            HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Число случайных наций" Foreground="#FFD4AF37" FontSize="18" 
+               HorizontalAlignment="Center" Margin="0,0,0,5"/>
+            <Slider x:Name="sliderNumCivs"
+            Width="780" Maximum="5" Minimum="1" Value="3"
+            IsSnapToTickEnabled="True" TickPlacement="BottomRight"
+            LargeChange="1" SmallChange="1"/>
+            <Grid Height="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="1" FontSize="18" Foreground="White" 
+                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1" Text="2" FontSize="18" Foreground="White" 
+                   HorizontalAlignment="Left" VerticalAlignment="Center" Margin="37,0,0,0"/>
+                <TextBlock Grid.Column="2" Text="3" FontSize="18" Foreground="White" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="3" Text="4" FontSize="18" Foreground="White" 
+                   HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,37,0"/>
+                <TextBlock Grid.Column="4" Text="5" FontSize="18" Foreground="White" 
+                   HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            </Grid>
+        </StackPanel>
+
+        <!-- Заголовок настроек игроков -->
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="Настройки игроков" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="24" FontWeight="Bold" Grid.ColumnSpan="4" 
+                   Foreground="#FFD4AF37"/>
+
+        <!-- === Блоки игроков === -->
+        <!-- Игрок 1 -->
+        <Grid x:Name="player1Grid" Grid.Column="1" Grid.Row="6" Visibility="Visible" Background="#FF3E3E42" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tb1" Grid.Row="0" Text="Player1" FontSize="14" Background="#FF252526" Foreground="White" BorderBrush="#FFD4AF37"/>
+            <CheckBox x:Name="cb1_Scenario"   Grid.Row="1" Content="Scenario packs"      Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb1_Gathering"   Grid.Row="3" Content="Gathering Storm"     Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb1_Rise"       Grid.Row="2" Content="Rise and Fall"       Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb1_Frontier"   Grid.Row="4" Content="New Frontier Pass"   Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb1_Leader"     Grid.Row="5" Content="Leader Pass"         Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+        </Grid>
+
+        <!-- Игрок 2–8 (аналогично, только имена отличаются) -->
+        <Grid x:Name="player2Grid" Grid.Column="2" Grid.Row="6" Visibility="Collapsed" Background="#FF3E3E42" Margin="5">
+                <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <TextBox x:Name="tb2" Grid.Row="0" Text="Player2" FontSize="14" Background="#FF252526" Foreground="White" BorderBrush="#FFD4AF37"/>
+                <CheckBox x:Name="cb2_Scenario" Grid.Row="1" Content="Scenario packs" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb2_Gathering" Grid.Row="3" Content="Gathering Storm" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+                <CheckBox x:Name="cb2_Rise"     Grid.Row="2" Content="Rise and Fall" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+                <CheckBox x:Name="cb2_Frontier" Grid.Row="4" Content="New Frontier Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+                <CheckBox x:Name="cb2_Leader"   Grid.Row="5" Content="Leader Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+        </Grid>
+
+        <Grid x:Name="player3Grid" Grid.Column="3" Grid.Row="6" Visibility="Collapsed" Background="#FF3E3E42" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tb3" Grid.Row="0" Text="Player3" FontSize="14" Background="#FF252526" Foreground="White" BorderBrush="#FFD4AF37"/>
+            <CheckBox x:Name="cb3_Scenario" Grid.Row="1" Content="Scenario packs" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb3_Gathering" Grid.Row="3" Content="Gathering Storm" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb3_Rise"     Grid.Row="2" Content="Rise and Fall" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb3_Frontier" Grid.Row="4" Content="New Frontier Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb3_Leader"   Grid.Row="5" Content="Leader Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+        </Grid>
+
+        <Grid x:Name="player4Grid" Grid.Column="4" Grid.Row="6" Visibility="Collapsed" Background="#FF3E3E42" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tb4" Grid.Row="0" Text="Player4" FontSize="14" Background="#FF252526" Foreground="White" BorderBrush="#FFD4AF37"/>
+            <CheckBox x:Name="cb4_Scenario" Grid.Row="1" Content="Scenario packs" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb4_Gathering" Grid.Row="3" Content="Gathering Storm" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb4_Rise"     Grid.Row="2" Content="Rise and Fall" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb4_Frontier" Grid.Row="4" Content="New Frontier Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb4_Leader"   Grid.Row="5" Content="Leader Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+        </Grid>
+
+        <Grid x:Name="player5Grid" Grid.Column="1" Grid.Row="7" Visibility="Collapsed" Background="#FF3E3E42" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tb5" Grid.Row="0" Text="Player5" FontSize="14" Background="#FF252526" Foreground="White" BorderBrush="#FFD4AF37"/>
+            <CheckBox x:Name="cb5_Scenario" Grid.Row="1" Content="Scenario packs" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb5_Gathering" Grid.Row="3" Content="Gathering Storm" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb5_Rise"     Grid.Row="2" Content="Rise and Fall" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb5_Frontier" Grid.Row="4" Content="New Frontier Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb5_Leader"   Grid.Row="5" Content="Leader Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+        </Grid>
+
+        <Grid x:Name="player6Grid" Grid.Column="2" Grid.Row="7" Visibility="Collapsed" Background="#FF3E3E42" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tb6" Grid.Row="0" Text="Player6" FontSize="14" Background="#FF252526" Foreground="White" BorderBrush="#FFD4AF37"/>
+            <CheckBox x:Name="cb6_Scenario" Grid.Row="1" Content="Scenario packs" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb6_Gathering" Grid.Row="3" Content="Gathering Storm" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb6_Rise"     Grid.Row="2" Content="Rise and Fall" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb6_Frontier" Grid.Row="4" Content="New Frontier Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb6_Leader"   Grid.Row="5" Content="Leader Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+        </Grid>
+
+        <Grid x:Name="player7Grid" Grid.Column="3" Grid.Row="7" Visibility="Collapsed" Background="#FF3E3E42" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tb7" Grid.Row="0" Text="Player7" FontSize="14" Background="#FF252526" Foreground="White" BorderBrush="#FFD4AF37"/>
+            <CheckBox x:Name="cb7_Scenario" Grid.Row="1" Content="Scenario packs" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb7_Gathering" Grid.Row="3" Content="Gathering Storm" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb7_Rise"     Grid.Row="2" Content="Rise and Fall" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb7_Frontier" Grid.Row="4" Content="New Frontier Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb7_Leader"   Grid.Row="5" Content="Leader Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+        </Grid>
+
+        <Grid x:Name="player8Grid" Grid.Column="4" Grid.Row="7" Visibility="Collapsed" Background="#FF3E3E42" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.12*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tb8" Grid.Row="0" Text="Player8" FontSize="14" Background="#FF252526" Foreground="White" BorderBrush="#FFD4AF37"/>
+            <CheckBox x:Name="cb8_Scenario" Grid.Row="1" Content="Scenario packs" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb8_Gathering" Grid.Row="3" Content="Gathering Storm" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb8_Rise"     Grid.Row="2" Content="Rise and Fall" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb8_Frontier" Grid.Row="4" Content="New Frontier Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+            <CheckBox x:Name="cb8_Leader"   Grid.Row="5" Content="Leader Pass" Foreground="White" VerticalAlignment="Center" FontSize="14"/>
+        </Grid>
+
+        <!-- Кнопка драфта -->
+        <Button Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                Content="Draft my dudes!" FontSize="24" Click="Button_Click"
+                Background="#FFD4AF37" Foreground="Black" BorderBrush="#FFD4AF37"
+                Padding="10" Margin="10"/>
+    </Grid>
+</Window>
